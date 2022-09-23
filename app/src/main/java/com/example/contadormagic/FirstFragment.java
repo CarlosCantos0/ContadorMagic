@@ -1,6 +1,7 @@
 package com.example.contadormagic;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -122,6 +123,13 @@ public class FirstFragment extends Fragment {
 
             @Override
             public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
+                Log.e(null, String.valueOf(menuItem.getItemId()));
+
+                if (menuItem.getItemId() == R.id.refresh) {
+                    reset();
+                    updateCounters();
+                }
+
                 return false;
             }
         });
@@ -132,15 +140,4 @@ public class FirstFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
-    //@Override
-    //public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-      //  if (item.getItemId() == R.id.refresh) {
-       //     reset();
-        //    updateCounters();
-      //  }
-
-        //return super.onOptionsItemSelected(item);
-    //}
-
 }

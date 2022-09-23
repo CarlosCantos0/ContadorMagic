@@ -4,7 +4,12 @@
     tools:context="com.example.contadormagic.MainActivity">
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="101"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:icon="@drawable/ic_baseline_refresh_24"
+        android:orderInCategory="102"
+        android:title="Refresh"
+        android:visible="true" />
 </menu>

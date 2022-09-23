@@ -77,8 +77,37 @@ public class FirstFragment extends Fragment {
             updateCounters();
         });
 
+        binding.PpP1.setOnClickListener(btn -> {
+            pp1++;
+            updateCounters();
+        });
 
+        binding.PlP1.setOnClickListener(btn -> {
+            pp1--;
+            updateCounters();
+        });
 
+        binding.PpP2.setOnClickListener(btn -> {
+            pp2++;
+            updateCounters();
+        });
+
+        binding.PlP2.setOnClickListener(btn -> {
+            pp2--;
+            updateCounters();
+        });
+
+        binding.Lp2p1.setOnClickListener(btn -> {
+            lp2--;
+            lp1++;
+            updateCounters();
+        });
+
+        binding.Lp1p2.setOnClickListener(btn -> {
+            lp1--;
+            lp2++;
+            updateCounters();
+        });
     }
 
     @Override
@@ -86,5 +115,15 @@ public class FirstFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+    //@Override
+    //public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+      //  if (item.getItemId() == R.id.refresh) {
+       //     reset();
+        //    updateCounters();
+      //  }
+
+        //return super.onOptionsItemSelected(item);
+    //}
 
 }
